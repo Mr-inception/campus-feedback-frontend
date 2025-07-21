@@ -139,23 +139,6 @@ campus-feedback-radar/
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Authors
-
-- ## Team Members
-
-| Name           | Role                  | GitHub Profile |
-|--------------|----------------------|---------------|
-| Vikas Gupta    | Frontend & Backend Developer    | [Vikas Gupta](https://github.com/Mr-inception) |
-| Shivam Maurya  | Database Administrator      | [Shivam Maurya](https://github.com/CharlieLee) |
-| Sachin Yadav   | Project Administrator       | [Sachin Yadav](https://github.com/DanaWhite) |
-
-### Contributions
-- **Vikas Gupta** - Developed the React frontend and styled components.
-- **Shivam Maurya** - Set the database in backend and API integrations.
-- **Sachin Yadav** - Managed project timelines and coordinated tasks.
-
-
 ## 🙏 Acknowledgments
 
-- GUVI for the project template
 - All contributors who have helped shape this project 
