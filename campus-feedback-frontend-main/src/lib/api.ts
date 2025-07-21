@@ -1,7 +1,10 @@
 // Removed: import axios from 'axios';
 // Removed: import { API_BASE_URL } from './api';
 
-export const API_BASE_URL = "http://localhost:5000"; // Change port if needed
+// Base URL for all API calls. Uses Vite env var when available so prod can point to real backend.
+export const API_BASE_URL =
+  // `VITE_API_BASE_URL` should be defined in an `.env` file or in the host's env settings.
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 export interface Feedback {
   name: string;
