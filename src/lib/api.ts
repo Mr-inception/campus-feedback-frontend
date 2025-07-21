@@ -1,4 +1,7 @@
-const API_BASE_URL = 'cf-backend-production.up.railway.app/api';
+// Base URL for all API calls.
+// Uses Vite env var when available so prod can point to real backend.
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 export interface Feedback {
   name: string;
@@ -20,7 +23,7 @@ export interface FeedbackStats {
 }
 
 export const submitFeedback = async (feedback: Feedback) => {
-  const response = await fetch(`${API_BASE_URL}/feedback`, {
+  const response = await fetch(`${API_BASE_URL}/api/feedback`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -37,7 +40,7 @@ export const submitFeedback = async (feedback: Feedback) => {
 };
 
 export const getFeedback = async (timeRange: string) => {
-  const response = await fetch(`${API_BASE_URL}/feedback?timeRange=${timeRange}`);
+  const response = await fetch(`${API_BASE_URL}/api/feedback?timeRange=${timeRange}`);
   
   if (!response.ok) {
     throw new Error('Failed to fetch feedback');
@@ -47,7 +50,7 @@ export const getFeedback = async (timeRange: string) => {
 };
 
 export const getFeedbackStats = async (timeRange: string) => {
-  const response = await fetch(`${API_BASE_URL}/feedback/stats?timeRange=${timeRange}`);
+  const response = await fetch(`${API_BASE_URL}/api/feedback/stats?timeRange=${timeRange}`);
   
   if (!response.ok) {
     throw new Error('Failed to fetch feedback stats');
